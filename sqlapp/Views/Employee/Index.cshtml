@@ -1,0 +1,30 @@
+﻿@model IEnumerable<sqlapp.Models.Employee>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+<title>
+    Simple Web application to demonstate Sql Azure Connectivity
+</title>
+<table>
+    <thead>
+
+        <tr>
+            <th scope="col">EmployeeID</th>
+            <th scope="col">EmployeeName</th>
+        </tr>
+    </thead> 
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td scope="row">@employee.EmployeeId</td>
+                <td scope="row">@employee.EmployeeName</td>
+            </tr>
+        }
+
+    </tbody>
+       
+    
+   
+</table>
